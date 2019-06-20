@@ -1,0 +1,29 @@
+{% extends "blog/base.html" %}
+
+<title>{% block title %}Register{% endblock %}</title>
+
+<body>
+  {% block content %}
+  <div class="jumbotron">
+
+   {% if registered %}
+   <h2>Thankyou for registering!</h2>
+
+   {% else %}
+   <h2>Register Here!!</h2>
+   <form enctype="multipart/form-data" method="post">
+     {% csrf_token %}
+     {{user_form.as_p}}
+     {{user_profile_form.as_p}}
+     <input type="submit" name="" value="Register">
+   </form>
+   {% endif %}
+
+
+
+
+
+  </div>
+
+  {% endblock %}
+</body>
