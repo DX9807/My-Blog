@@ -15,14 +15,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import UserForm,UserProfileInfoForm
 
 
-def display_user_profile_pic(request):
-
-  if request.method == 'GET':
-
-      # getting all the objects of hotel.
-      userprofileinfoform = UserProfileInfoForm.objects.all()
-      return render((request, 'base.html',
-                   {'user_image' : userprofileinfoform})) 
 
 
 def register_here(request):
