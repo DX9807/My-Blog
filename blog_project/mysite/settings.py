@@ -27,7 +27,7 @@ MEDIA_DIR=os.path.join(BASE_DIR,'media/')
 SECRET_KEY = 'hzetdi)f#0okx$zu5y=7aae$9e6q25#+wmlu%)#=1s9h-m5s&_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -130,3 +130,7 @@ LOGOUT_REDIRECT_URL='/'
 
 MEDIA_URL='/media/'
 MEDIA_ROOT=MEDIA_DIR
+
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
